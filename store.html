@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Store - RV Market Hub</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 18px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 7px;
+        }
+
+        .store-header {
+            background: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .store-icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .store-header h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .store-header p {
+            color: #666;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .product-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .price {
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 11px 18px;
+            border-radius: 7px;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Store - RV Market Hub</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 18px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 7px;
+        }
+
+        .store-header {
+            background: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .store-icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .store-header h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .store-header p {
+            color: #666;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .product-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .price {
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 11px 18px;
+            border-radius: 7px;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>RV Market Hub</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="stores.html">Stores</a>
+        <a href="product.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<section class="store-header">
+
+    <div class="store-icon">👕</div>
+
+    <h2>Fashion Store</h2>
+
+    <p>
+        Welcome to the RV Market Hub Fashion Store.
+        Discover clothing, fashion items and accessories.
+    </p>
+
+</section>
+
+<section class="container">
+
+    <h2>Featured Products</h2>
+
+    <div class="products">
+
+        <div class="product">
+
+            <div class="product-icon">👕</div>
+
+            <h3>Classic T-Shirt</h3>
+
+            <p>
+                A simple and comfortable everyday T-shirt.
+            </p>
+
+            <span class="price">Coming Soon</span>
+
+            <a href="contact.html" class="btn">
+                Contact Seller
+            </a>
+
+        </div>
+
+        <div class="product">
+
+            <div class="product-icon">👟</div>
+
+            <h3>Sports Shoes</h3>
+
+            <p>
+                A stylish footwear product for everyday use.
+            </p>
+
+            <span class="price">Coming Soon</span>
+
+            <a href="contact.html" class="btn">
+                Contact Seller
+            </a>
+
+        </div>
+
+        <div class="product">
+
+            <div class="product-icon">🎒</div>
+
+            <h3>Travel Bag</h3>
+
+            <p>
+                A useful bag for school, travel and everyday activities.
+            </p>
+
+            <span class="price">Coming Soon</span>
+
+            <a href="contact.html" class="btn">
+                Contact Seller
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="back">
+
+        <a href="stores.html" class="btn">
+            ← Back to Stores
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>© 2026 RV Market Hub</p>
+    <p>Your digital marketplace.</p>
+
+</footer>
+
+</body>
+</html>Enter            padding: 25px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>RV Market Hub</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="stores.html">Stores</a>
+        <a href="product.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<section class="store-header">
+
+    <div class="store-icon">👕</div>
+
+    <h2>Fashion Store</h2>
+
+    <p>
+        Welcome to the RV Market Hub Fashion Store.
+        Discover clothing, fashion items and accessories.
+    </p>
+
+</section>
+
+<section class="container">
+
+    <h2>Featured Products</h2>
+
+    <div class="products">
+
+        <div class="product">
+
+            <div class="product-icon">👕</div>
+
+            <h3>Classic T-Shirt</h3>
+
+            <p>
+                A simple and comfortable everyday T-shirt.
+            </p>
+
+            <span class="price">Coming Soon</span>
+
+            <a href="contact.html" class="btn">
+                Contact Seller
+            </a>
+
+        </div>
+
+        <div class="product">
+
+            <div class="product-icon">👟</div>
+
+            <h3>Sports Shoes</h3>
+
+            <p>
+                A stylish footwear product for everyday use.
+            </p>
+
+            <span class="price">Coming Soon</span>
+
+            <a href="contact.html" class="btn">
+                Contact Seller
